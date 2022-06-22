@@ -6,6 +6,7 @@ Payroll_Model model = new Payroll_Model();
 Console.WriteLine("1 - Establish Connectivity");
 Console.WriteLine("2 - Retrieve or Add Data to DataBase");
 Console.WriteLine("3 - Retrieve or Add Data to DataBase");
+Console.WriteLine("4 - Update Salary performed");
 int option = Convert.ToInt32(Console.ReadLine());
 switch (option)
 {
@@ -19,7 +20,7 @@ switch (option)
         model.NAME = "Ansari";
         model.SALARY = 45000;
         model.START_DATE = DateTime.Now;
-        model.GENDER = "F";
+        model.GENDER = "M";
         model.PHONE = 987542310;
         model.ADDRESS = "13C";
         model.DEPARTMENT = "HR";
@@ -29,4 +30,8 @@ switch (option)
         model.NET_PAY = 44500;
         select.AddEmployee(model);
         break;
+    case 4:
+        select.UpdateValue();
+        break;
+
 }
